@@ -13,7 +13,8 @@ rustflags = [
   "-Cno-vectorize-loops",
   "-Cforce-frame-pointers=no",
 ]
-runner = "./test.sh"
+#runner = "./test.sh"
+runner = "target-gen test template.yaml target/definition.yaml"
 
 [build]
 target = "thumbv8m.main-none-eabihf"

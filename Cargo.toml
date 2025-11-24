@@ -8,7 +8,7 @@ version = "0.1.0"
 [dependencies]
 cortex-m = "0.7.0"
 flash-algorithm = { version = "0.4.0" }
-nrf-pac = { git = "https://github.com/embassy-rs/nrf-pac", features = ["nrf54l15-app"] }
+nrf-pac = { git = "https://github.com/embassy-rs/nrf-pac", features = ["nrf54lm20a-app"] }
 
 # this lets you use `cargo fix`!
 [[bin]]
@@ -18,7 +18,7 @@ bench = false
 
 [profile.dev]
 codegen-units = 1
-debug = 2
+debug = false
 debug-assertions = true
 incremental = false
 opt-level = 3
@@ -26,7 +26,7 @@ overflow-checks = true
 
 [profile.release]
 codegen-units = 1
-debug = 2
+debug = false
 debug-assertions = false
 incremental = false
 lto = "fat"
@@ -45,5 +45,5 @@ overflow-checks = false
 codegen-units = 8
 debug = false
 debug-assertions = false
-opt-level = 0
+opt-level = 's'
 overflow-checks = false
